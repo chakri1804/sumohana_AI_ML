@@ -15,22 +15,28 @@ def polybasisfunc(x,degree,number_of_samples):
 # Number of training samples
 N = 100
 # Generate equispaced floats in the interval [0, 2pi]
-x = np.linspace(0, 10, N)
+x = np.linspace(0, 2*np.pi, N)
 # Generate noise
 mean = 0
 std = 0.05
 # Generate some numbers from the sine function
-y = x**2
+y = np.sin(x)
 # Add noise
 y += np.random.normal(mean, std, N)
 print("Enter degree of polynomial:")
 degree = input()
 degree = int(degree)
+print("Enter testing samples:")
+test_samples = input()
+test_samples = int(test_samples)
 phi = polybasisfunc(x,degree,N)
 # print(phi)
-# W = np.zeros((N,N))
+W = np.zeros((N,N))
 W = np.matmul(np.linalg.pinv(phi),y)
-# print(np.shape(W))
+# print(W)
+x1 = np.linspace(0, 2*np.pi, test_samples)
+phi1 = polybasisfunc(x1,degree,test_samples)
+y1 = np.matmul(phi1,W)
 # print(y1)
 # X = np.reshape(x,(10,1))
 # y1 = np.matmul(X,W)
@@ -38,8 +44,6 @@ W = np.matmul(np.linalg.pinv(phi),y)
 # print(y1)
 # error = (y1-y)
 # print(error)
-# x1 = np.linspace(0, 10, 100)
-y1 = np.polyval(W,x)
 plt.plot(x,y,'*')
-plt.plot(x,y1,'r')
+plt.plot(x1,y1,'.')
 plt.show()
