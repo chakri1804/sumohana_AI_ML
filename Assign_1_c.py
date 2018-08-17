@@ -57,8 +57,9 @@ plt.plot(x1,y1,'.')
 plt.show()
 
 
-## Not zero centred data
+## Not zero centred data and bias ommited
 zeroy = y - np.mean(y)
+# print(np.mean(y),np.mean(zeroy))
 phi = np.delete(phi,0,1)
 W = np.matmul(np.matmul(np.linalg.inv(np.matmul(phi.T,phi)+(L*np.identity(degree))),phi.T),zeroy)
 # print(np.shape(W))
