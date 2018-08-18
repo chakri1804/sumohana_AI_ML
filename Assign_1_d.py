@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import scipy
 
 # Number of training samples
-N = 100000
+N = 100
 # Generate equispaced floats in the interval [0, 2pi]
 x = np.linspace(0, 2*np.pi, N)
 # Generate noise
