@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy
 
 # Polynomial basis function and its matrix generator
 # This function has a hardcoded bias included. So for removal of it in further steps,

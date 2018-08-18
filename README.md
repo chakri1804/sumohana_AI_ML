@@ -1,9 +1,13 @@
 # Observations
 
-In all the implementations done above, we have these following parameters:
 Note:
-For simplicity sake, the sum of squared error is replaced by variance of error in prediction
-
+~~~
+1. For simplicity sake, the sum of squared error is replaced by variance of error
+2. The code is both Python2.7 and Python3 compatible
+3. Plots have been included for each question in the zip file and as PDF. The polynomial considered was degree 7 and N=10
+4. Plots are in same order as the questions
+5. For question 4, two codes have been attached - one for linear regression and another for basis function regression
+~~~
 ## For Q1.
 1. Noise variance which is being added to labels
 
@@ -46,12 +50,9 @@ For simplicity sake, the sum of squared error is replaced by variance of error i
 ~~~
 Note that in Q4 the best fit will be when
 1/β = variance(ŷ-y)
-but the variance can be still fixed by the user to observe fitting patterns
-Also, when we fix the variance, the following result was observed
 
-When N (training samples) is sufficiently large and variance for labels was fixed as v
-then,
-v = variance(ŷ-y)   
+When the likelihood labels have been calculated by np.random.normal(ŷ,1/β,N) and plotted against
+the curve and initial labels, they seem to be quite a good estimate.
 ~~~
 
 ## For Q5

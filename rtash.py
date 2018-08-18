@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy
 
 def polybasisfunc(x,degree,number_of_samples):
     phi = np.zeros((number_of_samples,degree+1))
