@@ -66,3 +66,4 @@ v = variance(ŷ-y)
 * The flexibility we have here is we can idependently study the effects of α and σ
 * For a degree more than the number of training samples, we can fix the variance in labels (**σ**) and experiment with (**α**) for a better fit
 * Slowly reducing α in small steps can achieve the best fit
+* For instance, consider N = 10 and polynomial degree of 11, the best fit occurs when σ = 0.009 and α = 0.01
