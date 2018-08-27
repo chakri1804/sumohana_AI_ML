@@ -27,7 +27,7 @@ df_Y = pd.read_csv('Y.csv',header=None)
 X = np.array(df_X,dtype=np.float64)
 X = X.T
 Y = np.array(df_Y,dtype=np.float64)
-X_test = np.array([[-3,1],[1,-1],[-1,1],[-1,-1]])
+X_test = np.array([[1,1],[1,-1],[-1,1],[-1,-1],[1e-5,0.1]])
 
 print("Give K for the K nearest neighbors \n")
 K = input()
