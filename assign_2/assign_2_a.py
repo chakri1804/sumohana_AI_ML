@@ -33,19 +33,18 @@ v00 = np.var(X[0][y_0])
 v01 = np.var(X[0][y_1])
 v10 = np.var(X[1][y_0])
 v11 = np.var(X[1][y_1])
-s00 = np.var(X[0][y_0])
-s01 = np.var(X[0][y_1])
-s10 = np.var(X[1][y_0])
-s11 = np.var(X[1][y_1])
-
+s00 = np.std(X[0][y_0])
+s01 = np.std(X[0][y_1])
+s10 = np.std(X[1][y_0])
+s11 = np.std(X[1][y_1])
 ######################
 #  Calculate Pr(y=k|x)
 ######################
 
 for i in range(0,len(X_test)):
-    pr_1 = (1/(2*np.pi*s01*s11))*np.exp(-((X_test[i][0]-m01)**2)/(2*v01))*np.exp(-((X_test[i][1]-m11)**2)/(2*v11))*pr1
-    pr_0 = (1/(2*np.pi*s00*s10))*np.exp(-((X_test[i][0]-m00)**2)/(2*v00))*np.exp(-((X_test[i][1]-m10)**2)/(2*v10))*pr0
-    # print(pr_1,pr_0,X_test[i])
+    pr_1 = (1.0/(2*np.pi*s01*s11))*(np.exp(-((X_test[i][0]-m01)**2)/(2.0*v01)))*(np.exp(-((X_test[i][1]-m11)**2)/(2.0*v11)))*pr1
+    pr_0 = (1.0/(2*np.pi*s00*s10))*(np.exp(-((X_test[i][0]-m00)**2)/(2.0*v00)))*(np.exp(-((X_test[i][1]-m10)**2)/(2.0*v10)))*pr0
+    print(pr_1,pr_0,X_test[i])
     if pr_1 > pr_0:
         print(X_test[i],'1')
     else:
