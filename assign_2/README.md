@@ -8,4 +8,5 @@ As a result, unless the test-sample is extremely close to Y-axis and near origin
 
 Consider [1e-5,0.1] for 300 nearest neighbors gives a label -1 where as looking at the dataset, the trend is clear that the labels are assigned depending on where they are on the R2 plane
 
-Also, an interesting observation is that 
+Also, an interesting observation is that [0,0] or whenever the probabilty of two classes is equal for any sample, it has been assigned to -1 as a hard rule
+ 
