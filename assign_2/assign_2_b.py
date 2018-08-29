@@ -25,6 +25,6 @@ for i in range(0,len(X_test)):
 	b = np.take(Y, idx[:K])
 	estimate = float(np.sum(b)/K)
 	if estimate>0 :
-		print(X[i],":1")
+		print(X_test[i],":1")
 	else:
-		print(X[i],":-1")
+		print(X_test[i],":-1")

@@ -42,6 +42,6 @@ for i in range(0,len(X_test)):
 	temp1 = [x[1] for x in temp]
 	estimate = float(np.sum(temp1)/K)
 	if estimate>0 :
-		print(X[i],":1")
+		print(X_test[i],":1")
 	else:
-		print(X[i],":-1")
+		print(X_test[i],":-1")
