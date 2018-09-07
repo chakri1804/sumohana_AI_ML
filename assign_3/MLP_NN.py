@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
 
 # Parameters
@@ -17,7 +12,7 @@ print("Give number of Epochs :")
 epochs = int(input())
 print("Give learning rate :")
 lr = float(input())
-print("Give the operation you need to train :")
+print("Give the operation you need to train (Enter text in CAPS):")
 print("1. XOR")
 print("2. OR")
 print("3. AND")
@@ -32,8 +27,7 @@ if option=='OR':
 if option=='AND':
     Output = np.array([[0],[0],[0],[1]])
 
-    
-    
+
 X = []
 Y = []
 
@@ -100,9 +94,6 @@ for i in range(epochs):
     Bi2 -= lr*b2
 
 
-# In[ ]:
-
-
 while(1):
     a=input("Enter test sample one by one: ").split(',')
     for i in range(0,2):
@@ -118,4 +109,3 @@ while(1):
     else :
         y_pred = 0
     print(option,':',y_pred)
-
