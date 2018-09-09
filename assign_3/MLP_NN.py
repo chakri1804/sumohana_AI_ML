@@ -95,11 +95,10 @@ for i in range(epochs):
 
 
 while(1):
-    a=input("Enter test sample one by one: ").split(',')
+    a=input("Enter test sample (comma seperated pair): ").split(',')
     for i in range(0,2):
         a[i]=float(a[i])
     a=np.array(a)
-    print(a.shape)
     out_1 = layer(a,W1,Bi1)
     z = sigm(out_1)
     out_2 = layer(z,W2,Bi2)
