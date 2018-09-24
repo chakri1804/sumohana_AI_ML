@@ -28,9 +28,8 @@ Mean = []
 Cov = []
 data = []
 for i in range(Nm):
-    Mean.append(np.random.uniform(1,2,D))
-    temp1 = np.random.uniform(1,2,(D,D))
-    Cov.append(np.matmul(temp1,temp1.T) + 1)
+    Mean.append(np.linspace(1,2,D))
+    Cov.append(np.identity(D)*(i+1))
     for j in range(Nspm):
         data.append(np.random.multivariate_normal(Mean[i],Cov[i]))
 

@@ -6,7 +6,7 @@ from math import log
 # np.random.seed(42)
 
 print("A note to the user\n This code has a function of generating data on it's own \n from a given number of multivariate_normal functions. \n This makes the covariance matrices go to Singular sometimes even though they are ensured to be positive semi-definite.")
-
+print("Or sometimes even in case of small number of samples per mode \n results in covariance matrix collapse")
 print("In SUCH a case, please execute the code again \n")
 print("\n")
 
@@ -28,9 +28,8 @@ Mean = []
 Cov = []
 data = []
 for i in range(Nm):
-    Mean.append(np.random.uniform(1,2,D))
-    temp1 = np.random.uniform(1,2,(D,D))
-    Cov.append(np.matmul(temp1,temp1.T) + 1)
+    Mean.append(np.linspace(1,2,D))
+    Cov.append(np.identity(D)*(i+1))
     for j in range(Nspm):
         data.append(np.random.multivariate_normal(Mean[i],Cov[i]))
 
