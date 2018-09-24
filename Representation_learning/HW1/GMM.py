@@ -7,6 +7,7 @@ from math import log
 
 print("A note to the user\n This code has a function of generating data on it's own \n from a given number of multivariate_normal functions. \n This makes the covariance matrices go to Singular sometimes even though they are ensured to be positive semi-definite.")
 
+print("Also in case of high number of Modes, the calculations of gaussian PDF fails and returns Nans")
 print("In SUCH a case, please execute the code again \n")
 print("\n")
 
@@ -137,10 +138,17 @@ while(itera<100):
     if(error<err):
         break
 ###
+print("###############")
+print("# Mixture Vector")
+print("###############")
 print(mix_list)
+print("###############")
+print("mean of data and estimated mean")
 print("###############")
 print(mean_list)
 print(Mean)
+print("###############")
+print("Covariance of data and estimated Covariances")
 print("###############")
 print(cov_list)
 print(Cov)

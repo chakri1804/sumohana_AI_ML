@@ -12,7 +12,7 @@ print("\n")
 
 print("Give the degree for the data to be generated")
 D = int(input())
-print("Give the number of modes the data must have")
+print("Give the number of modes the GMM must fit on")
 Nm = int(input())
 print("Give the number of samples per mode")
 Nspm = int(input())
@@ -29,7 +29,7 @@ Cov = []
 data = []
 for i in range(Nm):
     Mean.append(np.linspace(1,2,D))
-    Cov.append(np.identity(D)*(i+1))
+    Cov.append(np.identity(D))
     for j in range(Nspm):
         data.append(np.random.multivariate_normal(Mean[i],Cov[i]))
 
