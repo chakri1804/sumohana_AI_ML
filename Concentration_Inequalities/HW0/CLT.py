@@ -32,11 +32,13 @@ for i in range(n):
 d = d/n
 
 clts = [a,b,c,d]
+names = ["Uniform","Rayleigh","Poisson","Log-Normal"]
 
 fig, ax = plt.subplots(4, 1)
 
 for i in range(len(clts)):
     hist, bins = np.histogram(clts[i], bins=50, normed=True)
     bin_centers = (bins[1:]+bins[:-1])*0.5
+    ax[i].set_title(names[i])
     ax[i].plot(bin_centers, hist)
 plt.show()

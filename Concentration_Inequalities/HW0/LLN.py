@@ -35,10 +35,11 @@ for i in range(n4):
     d.append(np.mean(np.random.laplace(0,0.1,(i,))))
 
 llns = [a,b,c,d]
-
+names = ["Uniform","Log-Normal","Gaussian", "Laplace"]
 fig, ax = plt.subplots(4, 1)
 
 for i in range(len(llns)):
+    ax[i].set_title(names[i])
     ax[i].plot(llns[i])
     if (i != 1):
         ax[i].plot(np.zeros(np.shape(llns[i])), 'r')
