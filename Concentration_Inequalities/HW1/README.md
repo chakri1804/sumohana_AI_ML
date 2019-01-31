@@ -1,0 +1,1 @@
+For the fifth problem, we can see from the plot that tightness of the bound depends on the interval we're discussing. Like say from 0 to 0.2 some bounds are more relavant but as we proceed further, Bennet's bound dominates the rest
